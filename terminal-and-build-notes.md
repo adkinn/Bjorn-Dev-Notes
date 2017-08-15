@@ -1,5 +1,35 @@
 # Terminal and Build Notes
 
+## Publishing Changes
+1. Complete your Pull Request after it's been approved.
+2. (For unique pages) Complete type mapping within `.openpublsihing.publish.config.json`, however, this is for if the page is not unique and a composite of a liquid template.
+```
+	"docsets_to_publish": [
+		{
+			"docset_name": "devsandbox",
+			"build_source_folder": "devsandbox",
+			"build_output_subfolder": "devsandbox",
+			"locale": "en-us",
+			"version": 0,
+			"open_to_public_contributors": false,
+			"type_mapping": {
+				"Conceptual": "Content",
+				"ManagedReference": "Content",
+				"RestApi": "Content",
+				"LandingData": "Content",
+				"APIConnector": "Content",
+				"Tutorial": "Content",
+				"UniversalReference": "Content",
+				"YourNewPage": "Content"
+			},
+			"template_folder": "_themes",
+			"customized_template_paths": [
+				"_dependentPackages/uref/content"
+			]
+		}
+	],
+```
+
 ## Developing and Development Tasks
 
 ### Important PowerShell/terminal commands:
@@ -16,6 +46,20 @@ Commit everything as you would do normally, push to origin; then go to mseng sit
 During production, images and other media are usually stored in [the Microsoft Docs DocsMedia repository](https://github.com/MicrosoftDocs/DocsMedia/tree/master/media)
 
 ## Styling
+
+### General rules of thumb
+Don't use IDs. In fact, avoid using classes because you'll be using Sass to "sandbox" them all by nesting them within one (usually classed) container. A quick example of how Sass lets you to easily get away with using tag names:
+
+```css
+.yourContainer {
+	section {
+		article {
+			h3 {}
+			a {}
+		}
+	}
+}
+```
 
 ### Color and font-color variables 
 Find the variables for font and color here: `C:\repos\apex\Template.Docs\global\stylesheets\config\_settings.scss`.
