@@ -34,7 +34,7 @@
 
 ### Important PowerShell/terminal commands:
 -`npm run develop` from the `Template.Docs` folder. **convenient and dangerous tip** you can delete the content folders to speed up the compile time for the page you're working on, but *don't commit those changes!* You'll have to unstage these deletions in git before commiting files.
--`npm run opst init`
+-`npm run opst init`.
 
 ## Git
 
@@ -62,7 +62,7 @@ Don't use IDs. In fact, avoid using classes because you'll be using Sass to "san
 ```
 
 ### Color and font-color variables 
-Find the variables for font and color here: `C:\repos\apex\Template.Docs\global\stylesheets\config\_settings.scss`.
+Find the variables for font and color here: `Template.Docs\global\stylesheets\config\_settings.scss`.
 
 For most shared styles throughout the site, column widths or "Doc Blocks" check `Template.Docs\global\stylesheets\site.scss` stylesheet.
 
@@ -222,3 +222,24 @@ This repo is where published / prod templates are stored:
         }
     ]
 ```
+
+
+### Adding a unique new page
+
+1. If it's a unique page, add a new .liquid file in `Template.Docs\src\themes\`. Example name: `NotFound.html.liquid`. Change the inside variables to go to the correct files (see following).
+2. Add a page specific stylesheet within `Template.Docs\global\stylesheets\`. All lower case names, no camel case?
+3. Add a page specific JavaScript file within `Template.Docs\src\themes\javascript\`.
+
+
+# 404 Implementation Notes and Research
+
+- First off, the game doesn't work in its local version - going to need to investigate that.
+
+### The Implementation Itself
+Without having researched this quite enough to say for sure, the implementation of this page seems a manageable task. The localization of the page (or at least making it localize-able) should be fairly straight-forward. The game will require more time to implement, but this, again, seems like it could be done.
+
+### Localization of error messages
+- After its inital implementation this page would
+
+### Level creation
+- Levels take on a json structure, so while it would be *possible* to implement open source levels. It's likely that this would be a great deal more work than simply implementing the game itself.
