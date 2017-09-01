@@ -39,7 +39,7 @@
 ## Git
 
 ### Create a pull request
-Commit everything as you would do normally, push to origin; then go to mseng site and it should be there along with a link that says "Create new pull request" to develop branch (under all);
+Commit everything as you would do normally, push to origin; then go to mseng site and it should be there along with a link that says "Create new pull request" to **develop branch** (under all). Find work item and paste into the work items folder.
 
 ## Media
 

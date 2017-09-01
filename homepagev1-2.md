@@ -15,7 +15,7 @@
 1. [x] Make sure it all night theme compatible.
 1. [x] Right to left testing.
 1. [x] Night Theme testing.
-1. Test for accessibility.
+1. [x] Test for accessibility.
 1. Go over spec again to make sure you got it all.
 1. [x] Fix Resrouces on large screens bottom-border / global footer top border?
 
