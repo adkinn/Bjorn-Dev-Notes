@@ -54,3 +54,54 @@ This can be slow in the bash command prompt, but can be done more quickly my CDi
 There's currently a bug related to the `\DevStandbox`, which currently has to be on the preview branch in order for the commands on the `\Template.Docs` to build properly.
 
 
+
+
+```css
+// barlink classes
+
+.barLink {
+  align-items: center;
+  border-left: solid 6px $border;
+  display: flex;
+  font-size: 1.125rem;
+  line-height: 28px;
+  margin-top: 4px;
+  min-height: 36px;
+  padding-left: $card-padding;
+  padding-right: $card-padding;
+}
+
+html.theme_night .mainContainer[dir="rtl"] .barLink:hover {
+  border-left-color: $night-blue;
+}
+
+.barLink:hover {
+  border-left-color: $blue;
+}
+
+html.theme_night .barLink:hover {
+  border-left-color: $night-blue;
+}
+
+.barLink img {
+  width: 36px;
+  height: 36px;
+  margin: 5px 10px 5px 0;
+}
+
+.mainContainer[dir="rtl"] .barLink {
+	border-right: solid 6px $border;
+	border-left: none;
+}
+
+.mainContainer[dir="rtl"] .barLink:hover {
+  	border-right-color: $blue;
+}
+
+.mainContainer[dir="rtl"] .barLink img {
+  width: 36px;
+  height: 36px;
+  margin: 5px 0 5px 10px;
+}
+
+```

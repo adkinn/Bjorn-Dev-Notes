@@ -230,16 +230,14 @@ This repo is where published / prod templates are stored:
 2. Add a page specific stylesheet within `Template.Docs\global\stylesheets\`. All lower case names, no camel case?
 3. Add a page specific JavaScript file within `Template.Docs\src\themes\javascript\`.
 
+PPE
+CATS
+ghostery tracking files
+ops.microsoft.com
+You'll se what you have write permissions on\
 
-# 404 Implementation Notes and Research
+## Cache busting
+Sometimes the build with no JS changes don't trigger a removal of the old cache. In order to "cache bust" search "cachebust" in VS code. Find the corresponding JS file and just increment the number at the bottom of the file. The change to the JS file should trigger a full reload.
 
-- First off, the game doesn't work in its local version - going to need to investigate that.
 
-### The Implementation Itself
-Without having researched this quite enough to say for sure, the implementation of this page seems a manageable task. The localization of the page (or at least making it localize-able) should be fairly straight-forward. The game will require more time to implement, but this, again, seems like it could be done.
 
-### Localization of error messages
-- After its inital implementation this page would
-
-### Level creation
-- Levels take on a json structure, so while it would be *possible* to implement open source levels. It's likely that this would be a great deal more work than simply implementing the game itself.
