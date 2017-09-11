@@ -63,4 +63,4 @@ function escape(string) {
 //     console.log('after', after);
 // }
 
-console.log(escape(`Sm&tp.Mail<Address.For>IPAddress.ND'IS.F"oo.IPAdd<script></script>ress.bar`))
+console.log(escape(`Sm&tp.Mail<Address.For>IPAddress.ND'IS.F"oo.IPAdd<script></script>ress.bar`)localStorage)

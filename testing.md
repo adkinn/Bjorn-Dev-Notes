@@ -12,7 +12,7 @@ Of course, you can find your many scripts in the `package.json` file, but in gen
 
 In this file `C:\repos\apex\Template.Docs\global\test\karma\base.js`, comment out the following line:
 
-```JavaScript
+```javascript
     preprocessors: {
         // 'global/output/ts/**/*.js': ['coverage']
     },
@@ -21,7 +21,7 @@ In this file `C:\repos\apex\Template.Docs\global\test\karma\base.js`, comment ou
 
 Also, you can disallow the suite from running in all your browsers by going to `C:\repos\apex\Template.Docs\global\test\karma\develop.js` and removing whichever browswers you don't want to run.
 
-```JavaScript
+```javascript
 var config = require('./base.js');
 
 module.exports = function (karmaConfig) {

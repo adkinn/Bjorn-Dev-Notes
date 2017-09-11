@@ -238,6 +238,3 @@ You'll se what you have write permissions on\
 
 ## Cache busting
 Sometimes the build with no JS changes don't trigger a removal of the old cache. In order to "cache bust" search "cachebust" in VS code. Find the corresponding JS file and just increment the number at the bottom of the file. The change to the JS file should trigger a full reload.
-
-
-

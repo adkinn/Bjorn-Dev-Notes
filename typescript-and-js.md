@@ -23,7 +23,7 @@ if (msDocs.data.pageTemplate === "Home") {
 
 5. You can import other files with the standard es6 import syntax
 
-```JavaScript
+```javascript
 import { msDocs } from "./globals";
 import { scrollTo } from "./scroll-to";
 
