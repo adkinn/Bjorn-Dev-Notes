@@ -21,4 +21,4 @@ In summary:
 This is sort of DevSandbox, which is for development. However, the actual live site is an entirely different repository. To further complicate matters the branch names don't correspond to those in the Templates repository. In DevSandbox `master` is the staging branch which goes to review.docs, while, `live` is the production branch.
 
 ### The actual live repository
-??
+Is called DocsRoot, which can be found here: `https://github.com/MicrosoftDocs/DocsRoot`. Media files for this can be place / found in here `https://github.com/MicrosoftDocs/DocsMedia`, yet another content repo for resources.
