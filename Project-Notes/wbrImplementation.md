@@ -1,8 +1,7 @@
 # Implementing <wbr>
 
-Find text-formatting.ts here: `Template.Docs\global\ts\text-formatting.ts`.
-
-zero-width space causes problems- double-clicking to select text doesn't work, copy paste issues/hacks.
+## From the spec
+Find text-formatting.ts here: `Template.Docs\global\ts\text-formatting.ts`. Zero-width space causes problems- double-clicking to select text doesn't work, copy paste issues/hacks.
 
 - change \u200B to <wbr> in breakDots function
 - Polyfill for IE11
@@ -66,13 +65,13 @@ For yml partials
         - [x] typeScript
 
 - [] manage reference 
-    - `C:\repos\apex\Template.Docs\src\ContentTemplate\ManagedReference.html.primary.tmpl`
-    - see "General workflow" below here.
+    - [x] `C:\repos\apex\Template.Docs\src\ContentTemplate\ManagedReference.html.primary.tmpl`
+    - [x] see "General workflow" below here.
 - [x] Other occurances of breakText in Content
     - [x] `C:\repos\apex\Template.Docs\src\ContentTemplate\AzurePSModulePage.html.primary.js`
     - [x] `C:\repos\apex\Template.Docs\src\ContentTemplate\AzureCli.html.primary.js` replaced displayName
 
-## General workflow
+## General workflow for testing pages and templates
 - Search 'breakText' in the entire 'ContentTemplate' folder.
 - Then find the file it's changing.
 - See if you can open it.
@@ -84,3 +83,32 @@ For yml partials
 ## As a final check, might try a regex
 - {{#name}} ... {{value}} ... {{/name}}
 - {{ displayName }}
+
+
+## Implement classname replace --
+- will need to be on the parent element, cannot be on the dynamically rendered a tag, then must be on the outer parent of the items you're actually looking to apply it to. 
+- cannot simply use inner html, because you don't know what attributes will look like.
+- must find children, must find their text content, must replace that.
+
+## `word-break`
+This css property, must be set to `normal` in order for the implementation of the function to work properly. In many places, it is/was set to `break-all`, which causes it to break on every character, and thus gum up the works. In places where I know the break-text function is being used, I should remove the `break-text: break-all` declaration and **eventually do a cleanup PR to add classes where they need to be**
+
+## Further considerations for the break text function
+- it's being called on both the parent of a mostly textNode, we'll have to watch for href with .H or CamelCase
+
+# To do
+1. FInd out why the test isn't working correctly.
+1. Test pages to make sure the replace works.
+    - while doing this, see if you can find a list of class / containers / selectors where you know WBR is being use.
+1. Test pages to make sure the currently polyfill works (use created list above).
+1. Decide on program flow of the class replace function to class. Efficiency might be important. Find suitable containers to test on.
+1. Make a test page for you class replace function.
+
+
+# specName is a place where perhaps it would be wise to include a breakText replace.
+
+## Pages to check
+- [x] http://localhost:3000/en-us/devsandbox/reference/System.Web.HttpTaskAsyncHandler.html - IE and Chrome
+- [x] http://localhost:3000/en-us/devsandbox/javascript/Operations.html - Chrome, IE
+- [x] http://localhost:3000/en-us/devsandbox/apiBrowser/dotnet.html?view=netframework-4.7 - Chrome, IE
+- [x] http://localhost:3000/en-us/devsandbox/typescript/sp-http/httpclient.html - Chrome
