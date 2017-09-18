@@ -97,9 +97,6 @@ This css property, must be set to `normal` in order for the implementation of th
 - it's being called on both the parent of a mostly textNode, we'll have to watch for href with .H or CamelCase
 
 # To do
-1. FInd out why the test isn't working correctly.
-1. Test pages to make sure the replace works.
-    - while doing this, see if you can find a list of class / containers / selectors where you know WBR is being use.
 1. Test pages to make sure the currently polyfill works (use created list above).
 1. Decide on program flow of the class replace function to class. Efficiency might be important. Find suitable containers to test on.
 1. Make a test page for you class replace function.
