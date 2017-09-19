@@ -238,3 +238,19 @@ You'll se what you have write permissions on\
 
 ## Cache busting
 Sometimes the build with no JS changes don't trigger a removal of the old cache. In order to "cache bust" search "cachebust" in VS code. Find the corresponding JS file and just increment the number at the bottom of the file. The change to the JS file should trigger a full reload.
+
+
+# Testing Content from a Different Repository
+
+First got to github and clone the repository you want to test from. For example, prior to writing this I cloned the dotnet-sandbox repo.
+
+Then go into your `Template.Docs` and find your `/project.json` file. Inside this file you'll find the following line:
+
+```json
+  // this is the default value
+  "testdata": "../DevSandbox",
+  // change the file's path to the base of the repo you want to build
+  "testdata": "../dotnet-sandbox",
+```
+
+Once you've done this, you're almost ready, run the following two commands: `run opst init` and `run npm develop`.
