@@ -254,3 +254,23 @@ Then go into your `Template.Docs` and find your `/project.json` file. Inside thi
 ```
 
 Once you've done this, you're almost ready, run the following two commands: `run opst init` and `run npm develop`.
+
+## Preview pages without "building" them
+
+Go to page you want to view. `Ctrl-U` or Right click view source. Then copy the source html.
+
+Paste this into some safe folder. Perhaps one on you desktop called "Debug files." This will keep it safe. I'll call this `thefile.html`.
+
+
+Run `npm run develop` on your Template.Docs directory, find a page of a similiar type to the one you're trying to use inside the /drop folder. For example if your source page is Reference type, then go to a reference page in Template.Docs; if Conceptual, go to one of those. You'll need to replace several lines of code:
+
+1-3 are near the top.
+
+1. Link to the first stylesheet.
+2. Link to the second stylesheet.
+3. Script tag linking to global.min.js=
+4. (At the end of the body) the page specific script / js file (i.e. conceptual.min.js / reference.min.js)
+
+Then copy the `thefile.html` into the drop folder in Template.Docs. This is your build folder. Keep in mind every time you do `npm run develop` this folder gets blown away, so you'll have to re-copy your `thefile.html` from the safe folder on your desktop back to the drop folder.
+
+You should be able to preview this page now, and work with it while testing changes to js / scss files.
