@@ -6,8 +6,10 @@ Right now (9/21) the majority of localization happens in `Template.Docs\global\s
 
 `strings.yml`  is accessed in a templates `name.html.primary.js` via the `model.__global.insertUIDHere`. For example the `Tutorial.html.primary.js` file deals with the transforms for one template partial called `Tutorial.html.primary.tmpl`.
 
+> Note: you can also preview these templates Tutorial templates here `DevSandbox\devsandbox\tutorial\sample.yml`.
 
 In `strings.yml` itself you can add key value pairs like this:
+
 ```yml
 - uid: token.variableName 
   name: This is the default version of the localized string.
