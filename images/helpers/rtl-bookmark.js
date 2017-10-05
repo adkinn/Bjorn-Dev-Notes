@@ -7,10 +7,10 @@ var html = document.querySelector('html'),
 	elts.push(body); 
 	elts.push(main); 
 	
-	for (var i = 0; i < elts.length; i++) {
-		if (elts[i].getAttribute('dir') === 'ltr') {
-			elts[i].setAttribute('dir', 'rtl');
-		} else {
-			elts[i].setAttribute('dir', 'ltr');
-		}
+for (var i = 0; i < elts.length; i++) {
+	if (elts[i].getAttribute('dir') === 'ltr') {
+		elts[i].setAttribute('dir', 'rtl');
+	} else {
+		elts[i].setAttribute('dir', 'ltr');
 	}
+}
