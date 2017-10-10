@@ -1,16 +1,9 @@
-var html = document.querySelector('html'),
-	body = document.querySelector('body'),
-	main = document.querySelector('.mainContainer'),
-	elts = [];
+var dirs = Array.from(document.querySelectorAll('[dir]'));
 	
-	elts.push(html);
-	elts.push(body); 
-	elts.push(main); 
-	
-for (var i = 0; i < elts.length; i++) {
-	if (elts[i].getAttribute('dir') === 'ltr') {
-		elts[i].setAttribute('dir', 'rtl');
+for (var i = 0; i < dirs.length; i++) {
+	if (dirs[i].getAttribute('dir') === 'ltr') {
+		dirs[i].setAttribute('dir', 'rtl');
 	} else {
-		elts[i].setAttribute('dir', 'ltr');
+		dirs[i].setAttribute('dir', 'ltr');
 	}
 }
